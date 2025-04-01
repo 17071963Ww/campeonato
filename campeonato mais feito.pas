@@ -176,9 +176,6 @@ begin
     repeat
       for assentoEscolhido := 1 to MaxArquibancada do
       begin
-        if assentosArquibancada[assentoEscolhido] then
-        begin
-          writeln('Assento ', assentoEscolhido, ' disponível');
           write('Escolha o número do assento: ');
           readln(assentoEscolhido);
           if assentosArquibancada[assentoEscolhido] then
@@ -190,7 +187,6 @@ begin
           end
           else
             writeln('Este assento já está ocupado. Tente outro.');
-        end;
       end;
     until assentoSelecionado;
   end
@@ -200,9 +196,6 @@ begin
     repeat
       for assentoEscolhido := 1 to MaxGeral do
       begin
-        if assentosGeral[assentoEscolhido] then
-        begin
-          writeln('Assento ', assentoEscolhido, ' disponível');
           write('Escolha o número do assento: ');
           readln(assentoEscolhido);
           if assentosGeral[assentoEscolhido] then
@@ -215,7 +208,6 @@ begin
           else
             writeln('Este assento já está ocupado. Tente outro.');
         end;
-      end;
     until assentoSelecionado;
   end
   else if tipo = 2 then  
@@ -232,9 +224,6 @@ begin
       repeat
         for assentoEscolhido := 1 to MaxArquibancada do
         begin
-          if assentosArquibancada[assentoEscolhido] then
-          begin
-            writeln('Assento ', assentoEscolhido, ' disponível');
             write('Escolha o número do assento: ');
             readln(assentoEscolhido);
             if assentosArquibancada[assentoEscolhido] then
@@ -246,7 +235,6 @@ begin
             end
             else
               writeln('Este assento já está ocupado. Tente outro.');
-          end;
         end;
       until assentoSelecionado;
     end
@@ -256,8 +244,6 @@ begin
       repeat
         for assentoEscolhido := 1 to MaxGeral do
         begin
-          if assentosGeral[assentoEscolhido] then
-          begin
             writeln('Assento ', assentoEscolhido, ' disponível');
             write('Escolha o número do assento: ');
             readln(assentoEscolhido);
@@ -271,7 +257,6 @@ begin
             else
               writeln('Este assento já está ocupado. Tente outro.');
           end;
-        end;
       until assentoSelecionado;
     end
     else
@@ -349,8 +334,7 @@ begin
         for i := 1 to countSocio-1 do
           filaSocio[i] := filaSocio[i+1];
         dec(countSocio);
-        
-        
+
         valorIngresso := ValorSocio;
         valorAcumuladoSocio := valorAcumuladoSocio + valorIngresso;
         writeln('Valor do ingresso para Sócio: R$', valorIngresso);
@@ -392,7 +376,6 @@ begin
         writeln('Fila de visitante vazia!');
   end;
 end;
-
 
 BEGIN
   InicializaPilhas;
