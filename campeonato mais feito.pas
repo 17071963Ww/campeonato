@@ -1,4 +1,4 @@
-program Campeonato;
+program Campeonato;    // willian pinotti - gabriel dolzan
 uses CRT;
 
 Const
